@@ -1,0 +1,18 @@
+<script>
+    var numeroDeElementos = SerieFibonacci(8);
+    function SerieFibonacci(numeroDeElementos){
+        var fibonacci=[0,1];
+        for (let i=1; i<=numeroDeElementos-2; i++){
+            var anteultimo = fibonacci[fibonacci.length - 2];
+            /*console.log("ANTEÚLTIMO ->",anteultimo); */
+            var ultimo= fibonacci[fibonacci.length - 1];
+            /*console.log("ÚLTIMO ->",ultimo); */
+            suma = anteultimo + ultimo;
+            /*console.log("SUMA ->",suma); */
+            fibonacci.push(suma);
+            /*console.log(fibonacci); */
+        }   
+        return console.log(fibonacci);
+    }
+    
+</script>

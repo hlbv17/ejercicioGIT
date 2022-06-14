@@ -1,0 +1,31 @@
+<script>
+    var inicio=['unacadena',3,9,1,10,500,1,10,true];
+    var nuevo = limpiaArreglo(inicio);
+    console.log(ordenaArreglo(nuevo));
+
+    function limpiaArreglo(array){
+        for(let i=0; i<=array.length; i++){
+            if(typeof array[i] != 'number'){
+                console.log(array[i]);
+                array.splice(i, 1);
+            }
+        }
+        console.log(array);
+        return array;
+    }
+
+    function ordenaArreglo(array){
+        for(let i=0; i<=array.length; i++){
+            if(array[i+1] < array[i]){
+                array.unshift(array[i+1]);
+                array.splice(i+2,1);
+            }
+        }
+        /*console.log(array);*/
+        if(array[0] > array[1]){
+            ordenaArreglo(array);
+        }
+        /*console.log(array);*/
+        return array;
+    }
+</script>
